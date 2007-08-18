@@ -6,7 +6,7 @@
 Summary:	Apache module for FTP support
 Name:		apache-%{mod_name}
 Version:	0.14
-Release:	%mkrel 2
+Release:	%mkrel 3
 Group:		System/Servers
 License:	Apache License
 URL:		http://www.outoforder.cc/projects/apache/mod_ftpd/
@@ -68,9 +68,6 @@ libtool --mode=install %{_bindir}/install providers/fail/mod_ftpd_fail.la %{buil
 install -m0755 providers/dbm/dbmchroot %{buildroot}%{_bindir}/
 install -m0644 %{mod_conf} %{buildroot}%{_sysconfdir}/httpd/modules.d/%{mod_conf}
 
-install -d %{buildroot}%{_var}/www/html/addon-modules
-ln -s ../../../..%{_docdir}/%{name}-%{version} %{buildroot}%{_var}/www/html/addon-modules/%{name}-%{version}
-
 # cleanup
 rm -f %{buildroot}%{_libdir}/apache-extramodules/*.*a
 
@@ -95,6 +92,3 @@ fi
 %attr(0644,root,root) %config(noreplace) %{_sysconfdir}/httpd/modules.d/%{mod_conf}
 %attr(0755,root,root) %{_bindir}/dbmchroot
 %attr(0755,root,root) %{_libdir}/apache-extramodules/*.so
-%{_var}/www/html/addon-modules/*
-
-
