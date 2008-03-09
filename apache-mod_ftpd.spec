@@ -12,6 +12,7 @@ License:	Apache License
 URL:		http://www.outoforder.cc/projects/apache/mod_ftpd/
 Source0: 	http://www.outoforder.cc/downloads/mod_ftpd/%{mod_name}-%{version}.tar.bz2
 Source2:	%{mod_conf}
+Patch0:		mod_ftpd-dbi_api_fixes.diff
 Requires(pre): rpm-helper
 Requires(postun): rpm-helper
 Requires(pre):	apache-conf >= 2.2.0
@@ -32,6 +33,7 @@ easily extend the FTP server.
 %prep
 
 %setup -q -n %{mod_name}-%{version}
+%patch0 -p0
 
 cp %{SOURCE2} %{mod_conf}
 
