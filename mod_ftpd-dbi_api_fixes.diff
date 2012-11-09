@@ -1,0 +1,11 @@
+--- providers/dbi/mod_ftpd_dbi.c	2004-06-01 20:04:10.000000000 +0200
++++ providers/dbi/mod_ftpd_dbi.c.oden	2008-03-09 12:09:29.000000000 +0100
+@@ -328,7 +328,7 @@
+ 
+             if (e != NULL) {
+                 p = strdup(e);
+-                dbi_driver_quote_string(dbi_conn_get_driver(dbi_res->conn),
++                dbi_conn_quote_string(dbi_conn_get_driver(dbi_res->conn),
+                                         &p);
+             }
+             if (!strcasecmp(var, "UsernameField")) {
