@@ -9,7 +9,7 @@ Version:	0.14
 Release:	%mkrel 13
 Group:		System/Servers
 License:	Apache License
-URL:		http://www.outoforder.cc/projects/apache/mod_ftpd/
+URL:		https://www.outoforder.cc/projects/apache/mod_ftpd/
 Source0: 	http://www.outoforder.cc/downloads/mod_ftpd/%{mod_name}-%{version}.tar.bz2
 Source2:	%{mod_conf}
 Patch0:		mod_ftpd-dbi_api_fixes.diff
