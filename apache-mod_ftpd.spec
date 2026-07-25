@@ -6,7 +6,7 @@
 Summary:	Apache module for FTP support
 Name:		apache-%{mod_name}
 Version:	0.14
-Release:	%mkrel 13
+Release:	14
 Group:		System/Servers
 License:	Apache License
 URL:		https://www.outoforder.cc/projects/apache/mod_ftpd/
